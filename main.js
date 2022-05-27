@@ -43,6 +43,8 @@ function searchByLetters() {
   renderCurrentAssortment(filteredFruits);
   if (filteredFruits.length === 0) {
     stockListEmptyModal.style.display = 'block';
+  } else {
+    stockListEmptyModal.style.display = 'none';
   }
 }
 
