@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./main.js" type="module"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="header__title">Owocowy Raj</h1>
+        <h4 class="header__subtitle">Internetowy pseudosklep z owocami</h4>
+      </header>
+
+      <section class="stock">
+        <h2 class="stock__title">Poznaj nasz asortyment</h2>
+        <article class="stock__content">
+          <label for="letters" class="stock__select-label"
+            >Wyszukaj owoce po pierwszej literze nazwy</label
+          >
+          <div class="stock__searcher">
+            <select
+              name="by-letters"
+              id="letters"
+              class="stock__select stock__select--letters"
+            ></select>
+            <button class="button button--find">Wyszukaj</button>
+          </div>
+          <label for="alphabet" class="stock__select-label"
+            >Wyświetl listę wszystkich owoców w kolejności</label
+          >
+          <div class="stock__searcher">
+            <select
+              name="by-alphabet"
+              id="alphabet"
+              class="stock__select stock__select--alphabet"
+            >
+              <option value="1" class="select__option">
+                Alfabetycznej rosnąco
+              </option>
+              <option value="0" class="select__option">
+                Alfabetycznej malejąco
+              </option>
+            </select>
+            <button class="button button--order">Wyświetl owoce</button>
+          </div>
+          <h2 class="stock__list-title">
+            Lista owoców wg wybranych parametrów
+          </h2>
+          <ul class="stock__list"></ul>
+          <div class="stock__list--empty">
+            Wybierz jedną z opcji powyżej aby wyświetlić owoce
+          </div>
+          <!-- <li class="stock__list"></li> -->
+        </article>
+      </section>
+
+      <section class="stock">
+        <h2 class="stock__title">Twój koszyk</h2>
+        <article class="stock__content">
+          <p class="stock__label">
+            <span> lp. </span>
+            <span> Nazwa produktu </span>
+            <span> Cena/szt. </span>
+            <span> Ilość sztuk </span>
+            <span> Wartość </span>
+            <span> Akcje </span>
+          </p>
+          <div class="stock__cart-list"></div>
+          <div class="stock__cart stock__cart--empty">
+            Twój koszyk obecnie jest pusty
+          </div>
+          <div class="stock__cart-summary">
+            Do zapłaty:
+            <strong class="stock__cart-summary--embolden">0.00 zł</strong>
+          </div>
+        </article>
+      </section>
+      <section class="stock stock--prices">
+        <h2 class="stock__title stock__title--prices">Owocowy cennik</h2>
+        <article class="stock__content stock__content--prices">
+          <ul class="prices__list">
+            <li class="prices__item">
+              1. Owoce na literę 'A' - 3,50 zł / szt.
+            </li>
+            <li class="prices__item">
+              2. Owoce na literę 'M' - 4,80 zł / szt.
+            </li>
+            <li class="prices__item">
+              3. Owoce na literę 'K' - 20,00 zł / szt.
+            </li>
+            <li class="prices__item">Pozostałe owoce - 2,00 zł / szt.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
